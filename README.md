@@ -26,9 +26,9 @@ It is important to note that Bubble Sort is generally not recommended for large-
 
 # Function Description
 
-void bubblesort(int array[], int size) {
-// this function compares adjacent elements and swaps them if they are in the wrong order
+This function compares adjacent elements and swaps them if they are in the wrong order
 
+    void bubblesort(int array[], int size) {
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size-i-1; j++) {
             if (array[j] > array[j+1]){
@@ -36,25 +36,27 @@ void bubblesort(int array[], int size) {
             }
         }
     }
-}
-
-int main () {
-//first we create an array and take input of the elements of the array and the number of elements to be taken is determined by n
-
-    int array[100];
-    int n;
-    cout << "Enter the size of the array : ";
-    cin >> n;
-    cout << "Enter the elements of the array : ";
-    for (int i = 0; i < n; i++) {
-        cin >> array[i];
     }
     
-    // after that we call the function bubblesort
-    bubblesort(array,n);
-    // then we print the sorted array
+First we create an array and take input of the elements of the array and the number of elements to be taken is determined by n
+
+    int main () {
+     int array[100];
+     int n;
+     cout << "Enter the size of the array : ";
+     cin >> n;
+     cout << "Enter the elements of the array : ";
+     for (int i = 0; i < n; i++) {
+        cin >> array[i];
+     }
+    
+  After that we call the function bubblesort
+        
+     bubblesort(array,n);
+  Then we print the sorted array
+  
     cout << "Printing the sorted array : ";
     for (int i = 0; i < n; i++) {
         cout << array[i] << " ";
+     }
     }
-}
